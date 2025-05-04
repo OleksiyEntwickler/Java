@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:id="borderImg" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.Search">
+   <bottom>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.6" prefWidth="1200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="closebut" layoutX="822.0" mnemonicParsing="false" onAction="#close" text="Schließen" />
+            <Button layoutX="278.0" layoutY="-2.0" mnemonicParsing="false" onAction="#back" text="Zurück" />
+         </children></AnchorPane>
+   </bottom>
+   <top>
+      <ToolBar maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="1200.0" BorderPane.alignment="CENTER">
+        <items>
+            <TextField fx:id="searchfield" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="195.0" />
+        </items>
+      </ToolBar>
+   </top>
+   <center>
+      <SplitPane fx:id="spane" dividerPositions="0.22530186608122937, 0.27881448957189897" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="734.4" prefWidth="1000.0" BorderPane.alignment="CENTER">
+        <items>
+          <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="162.4" prefWidth="1000.0" SplitPane.resizableWithParent="false">
+               <children>
+                  <VBox fx:id="textdl" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="162.4" prefWidth="1000.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.8" prefWidth="1000.0" SplitPane.resizableWithParent="false">
+               <children>
+                  <Hyperlink fx:id="hl1t" layoutX="14.0" layoutY="3.0" text="Link" visible="false" />
+               </children>
+            </AnchorPane>
+          <AnchorPane fx:id="imgdl1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="524.8" prefWidth="1000.0" SplitPane.resizableWithParent="false">
+               <children>
+                  <ImageView fx:id="imgdl" fitHeight="263.0" fitWidth="499.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="imgdl2" fitHeight="263.0" fitWidth="499.0" layoutX="499.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="imgdl3" fitHeight="263.0" fitWidth="499.0" layoutX="270.0" layoutY="263.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </center>
+   <left>
+    <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="734.4" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="tableview" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="730.0" prefWidth="200.0">
+              <columns>
+                <TableColumn fx:id="titelcol" editable="false" prefWidth="200.0" resizable="false" text="Sehenswürdigkeiten" />
+                  <TableColumn fx:id="bildcol" editable="false" prefWidth="200.0" text="Sehenswürdigkeiten" visible="false" />
+                  <TableColumn fx:id="typencol" editable="false" prefWidth="200.0" text="Sehenswürdigkeiten" visible="false" />
+                  <TableColumn fx:id="bescol" editable="false" prefWidth="200.0" text="Sehenswürdigkeiten" visible="false" />
+                  <TableColumn fx:id="landcol" editable="false" prefWidth="200.0" text="Sehenswürdigkeiten" visible="false" />
+                  <TableColumn fx:id="linkcol" editable="false" prefWidth="200.0" text="Sehenswürdigkeiten" visible="false" />
+                  <TableColumn fx:id="bildcol2" editable="false" prefWidth="200.0" text="Sehenswürdigkeiten" visible="false" />
+                  <TableColumn fx:id="bildcol3" editable="false" prefWidth="200.0" text="Sehenswürdigkeiten" visible="false" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </left>
+</BorderPane>
