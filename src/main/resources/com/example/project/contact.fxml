@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.Contact">
+   <children>
+      <SplitPane dividerPositions="0.13353413654618476, 0.21887550200803216, 0.9191767068273092" orientation="VERTICAL" prefHeight="1200.0" prefWidth="600.0">
+        <items>
+          <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="1198.0">
+               <children>
+                  <TextArea fx:id="contactfield" editable="false" layoutX="300.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="598.0" />
+               </children>
+            </AnchorPane>
+          <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="75.0" prefWidth="1198.4">
+               <children>
+                  <TextField fx:id="fragefield" layoutX="254.0" layoutY="21.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="407.0" promptText="Frage" />
+                  <Button layoutX="898.0" layoutY="19.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onSend" prefHeight="25.6" prefWidth="56.0" text="Senden" />
+                  <TextField fx:id="emailfield" layoutX="715.0" layoutY="22.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.6" prefWidth="149.6" promptText="E-Mail" />
+                  <TextField fx:id="meld" editable="false" layoutX="252.0" layoutY="50.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="702.0" visible="false" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="mapview" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="604.0" prefWidth="1198.4" />
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="1198.4">
+               <children>
+                  <Button layoutX="247.0" layoutY="1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onBack" prefHeight="25.6" prefWidth="52.8" text="Zurück" />
+                  <Button fx:id="close" layoutX="874.0" layoutY="2.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onClose" prefHeight="25.6" prefWidth="66.4" text="Schließen" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</VBox>
